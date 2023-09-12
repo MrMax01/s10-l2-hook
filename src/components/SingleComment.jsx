@@ -7,7 +7,7 @@ const SingleComment = ({ comment }) => {
         method: "DELETE",
         headers: {
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGU4NjkxOTEwYmNhMDAwMTQ1ODQwMTMiLCJpYXQiOjE2OTQ1MjExNzYsImV4cCI6MTY5NTczMDc3Nn0.oPZ7OVz3uItRM0hPyCeIPlohmLFj6cBXMwJotQ9_KP0",
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGU4NjkxOTEwYmNhMDAwMTQ1ODQwMTMiLCJpYXQiOjE2OTQ1MjUxOTQsImV4cCI6MTY5NTczNDc5NH0.hfO7yvxSFx6roRnH_ZHWtx9ZKuRTNrcrdo-oVKNQHAw",
         },
       });
       if (response.ok) {

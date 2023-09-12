@@ -17,13 +17,13 @@ const AddComment = (props) => {
     try {
       let response = await fetch("https://striveschool-api.herokuapp.com/api/comments/" + this.props.asin, {
         method: "POST",
-        body: JSON.stringify(this.state.comment),
+        body: JSON.stringify({ comment: comment, rate: rate, elementId: props.asin }),
+
         headers: {
           "Content-type": "application/json",
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGU4NjkxOTEwYmNhMDAwMTQ1ODQwMTMiLCJpYXQiOjE2OTQ1MjExNzYsImV4cCI6MTY5NTczMDc3Nn0.oPZ7OVz3uItRM0hPyCeIPlohmLFj6cBXMwJotQ9_KP0",
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGU4NjkxOTEwYmNhMDAwMTQ1ODQwMTMiLCJpYXQiOjE2OTQ1MjUxOTQsImV4cCI6MTY5NTczNDc5NH0.hfO7yvxSFx6roRnH_ZHWtx9ZKuRTNrcrdo-oVKNQHAw",
         },
-        body: { comment: comment, rate: rate, elementId: props.asin },
       });
       if (response.ok) {
         alert("Comment was sent!");
