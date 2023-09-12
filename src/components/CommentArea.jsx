@@ -20,7 +20,7 @@ const CommentArea = (props) => {
   const fetchComments = async () => {
     setLoading(true);
     try {
-      let response = await fetch("https://striveschool-api.herokuapp.com/api/books/" + props.asin + "/comments/", {
+      let response = await fetch("https://striveschool-api.herokuapp.com/api/comments/", {
         headers: {
           Authorization:
             "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGU4NjkxOTEwYmNhMDAwMTQ1ODQwMTMiLCJpYXQiOjE2OTQ1MjUxOTQsImV4cCI6MTY5NTczNDc5NH0.hfO7yvxSFx6roRnH_ZHWtx9ZKuRTNrcrdo-oVKNQHAw",
